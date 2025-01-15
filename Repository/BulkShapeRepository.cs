@@ -6,7 +6,7 @@ using Mtd.Stopwatch.Core.Repositories.Bulk.Transit;
 
 namespace Mtd.Stopwatch.Infrastructure.EFCore.Bulk.Repository;
 
-public class BulkShapeRepository(DbContext dbContext) : AsyncBulkEFIdentifiableRepository<string, Shape>(dbContext), IBulkShapeRepository<IReadOnlyCollection<Shape>>
+public class BulkShapeRepository(StopwatchContext dbContext) : AsyncBulkEFIdentifiableRepository<string, Shape>(dbContext), IBulkShapeRepository<IReadOnlyCollection<Shape>>
 {
 	public Task<IReadOnlyCollection<Shape>> GetAllWithShapePointsAsync(CancellationToken cancellationToken) => throw new NotImplementedException();
 	public Task<Shape> GetByIdentityWithShapePointsAsync(string shapeId, CancellationToken cancellationToken) => throw new NotImplementedException();

@@ -23,5 +23,6 @@
 		<PackageReference Include="Mtd.Infrastructure.EFCore" />
 		<PackageReference Include="Mtd.Infrastructure.EFCore.Bulk" />
 		<PackageReference Include="Mtd.Stopwatch.Core" />
+		<PackageReference Include="Mtd.Stopwatch.Infrastructure.EFCore" />
 	</ItemGroup>
 </Project>
