@@ -11,4 +11,9 @@ public class BulkShapeRepository(DbContext dbContext) : AsyncBulkEFIdentifiableR
 	public Task<IReadOnlyCollection<Shape>> GetAllWithShapePointsAsync(CancellationToken cancellationToken) => throw new NotImplementedException();
 	public Task<Shape> GetByIdentityWithShapePointsAsync(string shapeId, CancellationToken cancellationToken) => throw new NotImplementedException();
 	public Task<Shape?> GetByIdentityWithShapePointsOrDefaultAsync(string shapeId, CancellationToken cancellationToken) => throw new NotImplementedException();
+	public async Task TruncateShapesAndShapePointsAsync(CancellationToken cancellationToken)
+	{
+		await _dbContext.Database.ExecuteSqlRawAsync("TRUNCATE TABLE [ShapePoint]", cancellationToken);
+		await _dbContext.Database.ExecuteSqlRawAsync("TRUNCATE TABLE [Shape]", cancellationToken);
+	}
 }
