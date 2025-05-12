@@ -13,7 +13,7 @@
     <PackageVersion Include="Mtd.Core" Version="9.2.1" />
     <PackageVersion Include="Mtd.Infrastructure.EFCore" Version="9.1.1" />
     <PackageVersion Include="Mtd.Infrastructure.EFCore.Bulk" Version="9.0.4" />
-    <PackageVersion Include="Mtd.Stopwatch.Core" Version="9.4.2" />
+    <PackageVersion Include="Mtd.Stopwatch.Core" Version="9.4.3-beta" />
     <PackageVersion Include="Mtd.Stopwatch.Infrastructure.EFCore" Version="9.3.1" />
   </ItemGroup>
 </Project>
